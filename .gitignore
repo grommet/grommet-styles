@@ -1,0 +1,13 @@
+.idea/**
+node_modules/**
+dist/**
+storybook-static/**
+.eslintcache
+coverage
+.vscode
+npm-debug.log
+package-lock.json
+yarn-error.log
+.DS_Store
+.tmp/
+.cache/
