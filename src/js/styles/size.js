@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
 
-export const size = (name, value, theme) => css`
+export const sizeStyle = (name, value, theme) => css`
   ${name}: ${theme.global.size[value] || value};
 `;

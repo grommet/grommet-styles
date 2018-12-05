@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { size } from 'grommet-styles';
+import { sizeStyle } from 'grommet-styles';
 
 const sizeTheme = {
   global: {
@@ -18,8 +18,8 @@ InnerBox.displayName = 'Box';
 
 const Box = styled(InnerBox)`
   border: 1px solid;
-  ${props => size('width', props.width, props.theme)}
-  ${props => size('height', props.height, props.theme)}
+  ${props => sizeStyle('width', props.width, props.theme)}
+  ${props => sizeStyle('height', props.height, props.theme)}
 `;
 
 const Size = () => (

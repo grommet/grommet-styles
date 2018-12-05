@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import styled from 'styled-components';
 import 'jest-styled-components';
 
-import { color, size } from '../..';
+import { colorStyle, sizeStyle } from '../..';
 
 const fakeTheme = {
   global: {
@@ -31,11 +31,11 @@ const fakeDarkTheme = {
 const Box = styled.div`
   ${props =>
     props.bg &&
-    color('background-color', props.bg.color || props.bg, props.theme)}
+    colorStyle('background-color', props.bg.color || props.bg, props.theme)}
   ${props =>
     props.color &&
-    color('color', props.color.color || props.color, props.theme, true)}
-  ${props => props.width && size('width', props.width, props.theme)}
+    colorStyle('color', props.color.color || props.color, props.theme, true)}
+  ${props => props.width && sizeStyle('width', props.width, props.theme)}
 `;
 
 test('renders a div with color', () => {
@@ -47,14 +47,14 @@ test('renders a div with color', () => {
       <Box bg="text" theme={fakeTheme}>
         black
       </Box>
-      <Box bg="pink" color="pink" theme={fakeTheme}>
-        pink
-      </Box>
       <Box bg="icon" theme={fakeTheme}>
         white
       </Box>
       <Box bg="text" theme={fakeDarkTheme}>
         white
+      </Box>
+      <Box bg="#767676" theme={fakeDarkTheme}>
+        #767676
       </Box>
       <Box bg={{ color: 'text' }} theme={fakeTheme}>
         black

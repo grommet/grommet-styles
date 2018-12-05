@@ -29,7 +29,7 @@ export const colorIsDark = color => {
   return brightness < 125;
 };
 
-export const normalizeColor = (color, theme, required) => {
+export const normalizeColor = (color, theme) => {
   const colorSpec = theme.global.colors[color] || color;
   // If the color has a light or dark object, use that
   let result = colorSpec;
@@ -46,5 +46,5 @@ export const normalizeColor = (color, theme, required) => {
   ) {
     result = normalizeColor(result, theme);
   }
-  return required && result === color ? 'inherit' : result;
+  return result;
 };

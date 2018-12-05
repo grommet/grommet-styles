@@ -10,8 +10,7 @@ exports[`renders a div with color 1`] = `
 }
 
 .c2 {
-  background-color: pink;
-  color: inherit;
+  background-color: #767676;
 }
 
 <div>
@@ -26,20 +25,19 @@ exports[`renders a div with color 1`] = `
     black
   </div>
   <div
+    className="c0"
+  >
+    white
+  </div>
+  <div
+    className="c0"
+  >
+    white
+  </div>
+  <div
     className="c2"
-    color="pink"
   >
-    pink
-  </div>
-  <div
-    className="c0"
-  >
-    white
-  </div>
-  <div
-    className="c0"
-  >
-    white
+    #767676
   </div>
   <div
     className="c1"

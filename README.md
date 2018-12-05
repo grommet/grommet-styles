@@ -14,11 +14,11 @@ or
 
 ```javascript
 import styled from 'styled-components';
-import { color, size } from 'grommet-styles';
+import { colorStyle, sizeStyle } from 'grommet-styles';
 
 const Box = styled.div`
-  ${props => props.bg && color('background-color', props.bg, props.theme)}
-  ${props => props.width && size('width', props.width, props.theme)}
+  ${props => props.bg && colorStyle('background-color', props.bg, props.theme)}
+  ${props => props.width && sizeStyle('width', props.width, props.theme)}
 `;
 
 const theme = {
