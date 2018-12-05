@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react';
 import styled, { ThemeProvider, withTheme } from 'styled-components';
 
-import { color, colorIsDark, normalizeColor } from 'grommet-styles';
+import { colorStyle, colorIsDark, normalizeColor } from 'grommet-styles';
 
 const colorTheme = {
   global: {
@@ -28,8 +28,8 @@ const darkTheme = {
 const StyledBox = styled.div`
   display: flex;
 
-  ${props => color('background', props.bg.color || props.bg, props.theme)}
-  ${props => color('color', 'text', props.theme)}
+  ${props => colorStyle('background', props.bg.color || props.bg, props.theme)}
+  ${props => colorStyle('color', 'text', props.theme)}
 `;
 
 const Box = withTheme(
@@ -82,7 +82,7 @@ const Box = withTheme(
 );
 
 const Text = styled.span`
-  ${props => color('color', 'text', props.theme)}
+  ${props => colorStyle('color', 'text', props.theme)}
 `;
 
 const Color = () => (
